@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hahander</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="louder">
+        <img src="https://i.postimg.cc/4yDSKVDJ/IMG-9863.png" id="pig">
+
+        <div class="gif"></div>
+    </div>
+    <div class="tx-1">Вашу мать лайкнули:</div>
+    <div class="likes-block">
+        {% for mam in moms %}
+            <div class="likers">
+                <div class="tx-2">{{ mam.id }}</div>
+                <div class="tx-2">{{ mam.username }} </div>
+                <div class="tx-2">{{ mam.age }} лет</div>
+            </div>
+        {% endfor %}
+    </div>
+{% include 'mainapp/includes/menu.html' %}
+</body>
+<script src="{% static 'js/louder.js' %}"></script>
+</html>

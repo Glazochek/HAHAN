@@ -1,0 +1,12 @@
+{% load static %}
+
+<div class="menu">
+    <a href="/" class="a"><img src="{% static 'img/home.png' %}" alt="#"></a>
+    <a href="{% url 'likes' %}" class="a"><img src="{% static 'img/heart.png' %}" alt="#"></a>
+    <a href="{% url 'read' %}" class="a"><img src="{% static 'img/open-book.png' %}" alt="#"></a>
+    {% if not user.is_authenticated %}
+    <a href="{% url 'auth:login' %}" class="a"><img src="{% static 'img/user.png' %}" alt="#"></a>
+    {% else %}
+        <a href="{% url 'auth:edit' %}" class="a"><img src="{% static 'img/user.png' %}" alt="#"></a>
+    {% endif %}
+</div>

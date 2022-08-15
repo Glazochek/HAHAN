@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hahander</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'js/louder.js' %}">
+</head>
+<body>
+    <div class="louder"></div>
+    <div class="stop">ТЕХНИЧЕСКИЕ ШОКОЛАДКИ, ВЫЗЫВАЙТЕ ОЛЕГА</div>
+    <div onmousedown="V()" class="text">HAHAnder</div>
+    <div class="mothers-block">
+        <img class="photo-mother" src="/media/{{ u.image }}" alt="#">
+        <div class="text-1-1">{{ u.aboutMe }}</div>
+        <div class="imgs0block">
+            <a href="/likes/{{ u.id }}/love"><img class="aimg" src="{% static 'img/like.png' %}" alt=""></a>
+            <a href="/"><img class="aimg-1" src="{% static 'img/like.png' %}" alt=""></a>
+        </div>
+        
+    </div>
+{% include 'mainapp/includes/menu.html' %}
+</body>
+<script src="{% static 'js/louder.js' %}"></script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hahander</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="louder">
+        <div class="gif"></div>
+    </div>
+    <div class="tx-1">Анекдоты и полезные советы про мать:</div>
+    <div class="likes-block">
+        {% for r in rd %}
+            <div class="likers rur">{{ r.text }}</div>
+        {% endfor %}
+    </div>
+{% include 'mainapp/includes/menu.html' %}
+</body>
+<script src="{% static 'js/louder.js' %}"></script>
+</html>

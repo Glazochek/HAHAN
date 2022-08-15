@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hahander</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="louder"></div>
+    <div class="likes-block">
+        <div class="likers"></div>
+        <div class="likers"></div>
+        <div class="likers"></div>
+        <div class="likers"></div>
+        <div class="likers"></div>
+        <div class="likers"></div>
+    </div>
+{% include 'mainapp/includes/menu.html' %}
+</body>
+<script src="{% static 'js/louder.js' %}"></script>
+
+</html>
